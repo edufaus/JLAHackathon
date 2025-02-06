@@ -41,7 +41,8 @@
         <nav class="container mx-auto p-6 fixed top-0 left-0 right-0 z-50">
             <div class="flex items-center justify-between p-4 rounded-lg backdrop-blur-md bg-black/20 border border-white/10">
                 <div class="flex items-center">
-                    <img src="ReflectEd.png" alt="Learnique" class="h-12 w-auto mr-4"/>
+                <h1 class="text-2xl color-white text-white">ReflectEd</h1>
+                    
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <div class="space-x-8">
@@ -118,7 +119,7 @@
                 {#each [
                     { icon: Brain, title: "Mood Tracking", desc: "Develop emotional intelligence through daily reflections." },
                     { icon: Sparkles, title: "Intuitive Interface", desc: "Clean, modern design that makes productivity tools accessible to everyone." },
-                    { icon: Zap, title: "Collaboration", desc: "Foster collaboration and productivity through shared notes and reminders." }
+                    { icon: Zap, title: "Clear Commuication", desc: "Increase productivity with a fourm to help coordinate with other students." }
                 ] as feature}
                 <div
                     class="feature-card p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6] transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(219,74,43,0.2)]"
@@ -141,13 +142,13 @@
                     <div class="space-y-6">
                         <h3 class="text-2xl font-bold text-white">Revolutionizing Organization</h3>
                         <p class="text-gray-400">
-                            We're not just another to-do list. ReflectEd combines porductivity and mental health with collaborative elements such as reminders, to-do lists, notes, and a modd tracker.
+                            We're not just another planner app. ReflectEd combines productivity and mental health with as features such as a mood tracker, planner, and forum.
                         </p>
                     </div>
                     <div class="space-y-6">
                         <h3 class="text-2xl font-bold text-white">Built for Everyone</h3>
                         <p class="text-gray-400">
-                            Whether you're a student, or educator, our platform adapts to your needs, making it easy to collaborate together and track mental health.
+                            Whether you're a student, or educator, our platform adapts to your needs, making it easy to plan ahead and track mental health.
                         </p>
                     </div>
                 </div>
@@ -155,48 +156,7 @@
         </div>
 
 
-        <div id="pricing" class="container mx-auto px-6 py-24 border-t border-[#8B5CF6]/20 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#8B5CF6] to-[#9f75ff] bg-clip-text text-transparent">
-                Plans
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Free Plan -->
-                <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
-                    <h3 class="text-2xl font-bold text-white mb-4">Student</h3>
-                    <div class="text-4xl font-bold text-gray-400 mb-6">$0</div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Daily mood reflection</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Recieve reminders</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Collaborate with others</li>
-                    </ul>
-                    <!-- <Button variant="outline" class="w-full border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10">Get Started</Button> -->
-                </div>
-
-                <!-- Credits Plan -->
-                <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
-                    <h3 class="text-2xl font-bold text-white mb-4">Educator</h3>
-                    <div class="text-4xl font-bold text-[#8B5CF6] mb-6">$5<span class="text-lg text-gray-400">/500</span></div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Track student moods</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Send reminders</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Chat with students</li>
-                    </ul>
-                    <!-- <Button class="w-full bg-[#8B5CF6] hover:bg-[#7733ff]">Buy Credits</Button> -->
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
-                    <h3 class="text-2xl font-bold text-white mb-4">Admin</h3>
-                    <div class="text-4xl font-bold text-[#8B5CF6] mb-6">Custom</div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />School-wide access</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Student management</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />All features included</li>
-                    </ul>
-                    <!-- <Button variant="outline" class="w-full border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10">Contact Sales</Button> -->
-                </div>
-            </div>
-        </div>
+  
 
         <!-- Footer -->
         <footer class="container mx-auto px-6 py-12 border-t border-[#8B5CF6]/20">

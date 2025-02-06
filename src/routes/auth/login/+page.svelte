@@ -78,7 +78,7 @@
 
     <Card class="login-card w-full max-w-md mx-4 p-8 bg-black/40 backdrop-blur-xl border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40 transition-all duration-500">
         <div class="text-center mb-8">
-            <img src="../ReflectEd.png" alt="Learnique" class="login-element h-12 w-auto mx-auto mb-6"/>
+            <!-- <img src="../ReflectEd.png" alt="Learnique" class="login-element h-12 w-auto mx-auto mb-6"/> -->
             <h2 class="login-element text-2xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#cc99ff] bg-clip-text text-transparent">
                 Welcome Back
             </h2>
@@ -135,7 +135,7 @@
                 onclick={GAUTH}
                 class="w-full text-white/75 hover:text-white/95 border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40 bg-black/30 hover:bg-black/50 transform hover:scale-105 transition-all duration-300"
             >
-                <img src="/google.svg" alt="Google" class="w-5 h-5 mr-2" />
+                <!-- <img src="/google.svg" alt="Google" class="w-5 h-5 mr-2" /> -->
                 Sign in with Google
             </Button>
             </div>
