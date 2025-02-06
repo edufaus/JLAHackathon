@@ -84,6 +84,7 @@ declare module '$env/static/private' {
 	export const npm_package_scripts_preview: string;
 	export const npm_package_devDependencies_lucide_svelte: string;
 	export const ICUBE_ELECTRON_PATH: string;
+	export const npm_package_dependencies_date_fns: string;
 	export const npm_lifecycle_event: string;
 	export const LANG: string;
 	export const npm_package_name: string;
@@ -224,6 +225,7 @@ declare module '$env/dynamic/private' {
 		npm_package_scripts_preview: string;
 		npm_package_devDependencies_lucide_svelte: string;
 		ICUBE_ELECTRON_PATH: string;
+		npm_package_dependencies_date_fns: string;
 		npm_lifecycle_event: string;
 		LANG: string;
 		npm_package_name: string;
