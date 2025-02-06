@@ -6,22 +6,26 @@
     import { doc, getDoc, setDoc, collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 
     let currentMood = 5;
-    let journalEntry = "";
+    let journalEntries = {
+        feeling: "",
+        grateful: "",
+        tomorrow: ""
+    };
     let hasLoggedToday = false;
     let previousEntries: any[] = [];
     let user: any;
 
     const moodEmojis = ["😢", "😕", "😐", "🙂", "😊"];
     const journalPrompts = [
-        "What made you feel this way today?",
-        "What's one thing you're grateful for today?",
-        "What would make tomorrow better?"
+        { id: "feeling", text: "What made you feel this way today?" },
+        { id: "grateful", text: "What's one thing you're grateful for today?" },
+        { id: "tomorrow", text: "What would make tomorrow better?" }
     ];
 
     async function checkTodayEntry(userId: string) {
         const today = new Date().toISOString().split('T')[0];
         console.log(today)
-        const entriesRef = collection(db, "emotions", userId, "entries");
+        const entriesRef = collection(db, "Emotions", userId, "entries");
         const q = query(entriesRef, where("date", "==", today));
         const querySnapshot = await getDocs(q);
         hasLoggedToday = !querySnapshot.empty;
@@ -31,7 +35,7 @@
     }
 
     async function loadPreviousEntries(userId: string) {
-        const entriesRef = collection(db, "emotions", userId, "entries");
+        const entriesRef = collection(db, "Emotions", userId, "entries");
         const q = query(entriesRef, orderBy("date", "desc"));
         const querySnapshot = await getDocs(q);
         
@@ -41,26 +45,27 @@
         }));
     }
 
-    async function submitMoodLog(userId: string) {
+    async function submitMoodLog() {
         const today = new Date().toISOString().split('T')[0];
-        const entryRef = doc(db, "emotions", userId, "entries", today);
+        const entryRef = doc(db, "Emotions", user.uid, "entries", today);
         
         await setDoc(entryRef, {
             date: today,
             mood: currentMood,
-            journal: journalEntry,
+            journalEntries: journalEntries,
             timestamp: new Date().toISOString()
         });
 
         hasLoggedToday = true;
-        await loadPreviousEntries(userId);
-        journalEntry = "";
+        await loadPreviousEntries(user.uid);
+        journalEntries = { feeling: "", grateful: "", tomorrow: "" };
     }
 
     onMount(() => {
         auth.onAuthStateChanged(async (usr) => { 
             if (usr) {
                 try {
+
                     const docRef = doc(db, "Users", usr.uid);
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
@@ -85,9 +90,9 @@
     });
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-black via-slate-900 to-[#2b1511] p-8">
-    <div class="max-w-2xl mx-auto bg-black/20 border border-[#db4a2b]/20 rounded-lg p-6 backdrop-blur-md">
-        <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-[#8B5CF6] via-[#e86547] to-[#db4a2b] bg-clip-text text-transparent">Daily Mood Logger</h1>
+<div class="min-h-screen bg-gradient-to-br from-black via-slate-900 to-[#110033] p-8">
+    <div class="max-w-2xl mx-auto bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md">
+        <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-[#8B5CF6] via-[#cc99ff] to-[#7733ff] bg-clip-text text-transparent">Daily Mood Logger</h1>
 
         {#if hasLoggedToday}
             <div class="text-white p-4 bg-[#8B5CF6]/20 rounded-lg mb-8">
@@ -110,11 +115,11 @@
                 <div class="space-y-4 mt-8">
                     {#each journalPrompts as prompt}
                         <div class="mb-4">
-                            <label class="text-white mb-2 block">{prompt}</label>
+                            <label class="text-white mb-2 block">{prompt.text}</label>
                             <textarea
-                                class="w-full p-2 rounded-lg bg-black/30 text-white border border-[#db4a2b]/20 focus:border-[#db4a2b] transition-all"
+                                class="w-full p-2 rounded-lg bg-black/30 text-white border border-[#8B5CF6]/20 focus:border-[#7733ff] transition-all"
                                 rows="3"
-                                bind:value={journalEntry}
+                                bind:value={journalEntries[prompt.id]}
                             ></textarea>
                         </div>
                     {/each}
@@ -122,7 +127,7 @@
 
                 <Button 
                     class="bg-[#8B5CF6] text-white hover:bg-[#7c4ddb] mt-4 w-full"
-                    on:click={submitMoodLog}
+                    onclick={submitMoodLog}
                 >
                     Log Today's Mood
                 </Button>
@@ -133,12 +138,19 @@
             <h2 class="text-2xl font-bold text-white mb-4">Previous Entries</h2>
             <div class="space-y-4">
                 {#each previousEntries as entry}
-                    <div class="bg-black/30 p-4 rounded-lg border border-[#db4a2b]/20">
+                    <div class="bg-black/30 p-4 rounded-lg border border-[#8B5CF6]/20">
                         <div class="flex justify-between items-center mb-2">
                             <span class="text-white">{entry.date}</span>
                             <span class="text-2xl">{moodEmojis[entry.mood - 1]}</span>
                         </div>
-                        <p class="text-white/80">{entry.journal}</p>
+                        <div class="space-y-2">
+                            {#each journalPrompts as prompt}
+                                <div class="mb-2">
+                                    <h4 class="text-white/60 text-sm">{prompt.text}</h4>
+                                    <p class="text-white/80">{entry.journalEntries[prompt.id]}</p>
+                                </div>
+                            {/each}
+                        </div>
                     </div>
                 {/each}
             </div>

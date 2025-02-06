@@ -1,7 +1,7 @@
 <script lang="ts">
     import AuthManager from "$lib/components/other/AuthManager.svelte";
     import { auth, db } from '$lib/firestuff.js';
-    import { doc, setDoc } from 'firebase/firestore';
+    import { doc, setDoc, collection } from 'firebase/firestore';
     import { onMount, onDestroy } from 'svelte';
     import { goto } from '$app/navigation';
     import { Button } from "$lib/components/ui/button";
@@ -63,9 +63,15 @@
                 birth: birthDate,
                 photoURL: user.photoURL,
                 createdAt: new Date().toISOString(),
-                isAdmin: false;
+                isAdmin: false
             });
-            console.log("setting")
+
+            // Initialize emotions collection structure
+            const emotionsDoc = doc(db, 'Emotions', user.uid);
+            await setDoc(emotionsDoc, {
+                userId: user.uid,
+                createdAt: new Date().toISOString()
+            });
 
             goto('/dashboard');
         } catch (e: any) {
