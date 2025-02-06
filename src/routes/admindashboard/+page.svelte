@@ -69,23 +69,23 @@
         </div> -->
  <div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
             <h3 class="text-xl font-bold text-white mb-2">Announcements</h3>
-            <p class="text-white mb-4">Send an announcement.</p>
+            <p class="text-white mb-4">Send an announcement to all users.</p>
             <a href="adminAnnounce">
              <Button o class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Announce</Button>
             </a>
            
         </div>
         <div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
-            <h3 class="text-xl font-bold text-white mb-2">Go to users emotions</h3>
-            <p class="text-white mb-4">Explore study materials and resources.</p>
+            <h3 class="text-xl font-bold text-white mb-2">View users emotions</h3>
+            <p class="text-white mb-4">See the mood tracker for all users.</p>
             <a href="/adminEmotions">
-                <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Enter</Button>
+                <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">View</Button>
             </a>
             
         </div>
             <div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
             <h3 class="text-xl font-bold text-white mb-2">Log Out</h3>
-            <p class="text-white mb-4">Log Out of your account.</p>
+            <p class="text-white mb-4">Log out of your account.</p>
             <Button onclick={logOutPlease} class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Log Out</Button>
         </div>
       

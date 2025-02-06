@@ -93,6 +93,12 @@
 <div class="min-h-screen bg-gradient-to-br from-black via-slate-900 to-[#110033] p-8">
     <div class="max-w-2xl mx-auto bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md">
         <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-[#8B5CF6] via-[#cc99ff] to-[#7733ff] bg-clip-text text-transparent">Daily Mood Logger</h1>
+        <Button
+                class="bg-[#8B5CF6] text-white hover:bg-[#7c4ddb]"
+                onclick={() => window.location.href = '/dashboard'}
+            >
+                Back to Dashboard
+            </Button>
 
         {#if hasLoggedToday}
             <div class="text-white p-4 bg-[#8B5CF6]/20 rounded-lg mb-8">
@@ -155,8 +161,5 @@
                 {/each}
             </div>
         </div>
-        <a href="/dashboard">
-            <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Dashboard</Button>
-        </a>
     </div>
 </div>

@@ -67,7 +67,14 @@
             <p class="text-white mb-4">Access your documents and files here.</p>
             <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300" onclick={()=>{goto("/docs/dashboard")}}>Enter</Button>
         </div> -->
-
+<div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
+            <h3 class="text-xl font-bold text-white mb-2">Forum</h3>
+            <p class="text-white mb-4">Rad and write posts to be shared with your fellow classmates.</p>
+            <a href="/forum">
+                <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Enter</Button>
+            </a>
+            
+        </div>
         <div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
             <h3 class="text-xl font-bold text-white mb-2">Log Mood</h3>
             <p class="text-white mb-4">Record your current mood for today.</p>
@@ -79,7 +86,7 @@
         <div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
             <h3 class="text-xl font-bold text-white mb-2">Planner</h3>
             <p class="text-white mb-4">Get productive with notes and reminders.</p>
-            <a href="https://yteach.com"> <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Enter</Button></a>
+            <a href="/planner"> <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Enter</Button></a>
         </div>
           <div class="transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] h-1/4 bg-black/20 border border-[#8B5CF6]/20 rounded-lg p-6 backdrop-blur-md hover:border-[#8B5CF6] transition-all duration-500 w-52">
             <h3 class="text-xl font-bold text-white mb-2">Log Out</h3>

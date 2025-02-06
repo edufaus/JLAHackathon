@@ -103,6 +103,7 @@
                     <Button
                         variant="outline"
                         class="text-lg px-8 py-6 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[black/50] hover:text-[#8B5CF6] bg-black/50 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+                        onclick="location.href='https://www.canva.com/design/DAGeViTfEwc/7dHpTjMtQQnIE4lBrGfXhg/edit?utm_content=DAGeViTfEwc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton';"
                     >
                         View Presentation
                         <!-- keep? -->
@@ -138,7 +139,7 @@
                 </h2>
                 <div class="grid md:grid-cols-2 gap-12">
                     <div class="space-y-6">
-                        <h3 class="text-2xl font-bold text-white">Revolutionizing Learning</h3>
+                        <h3 class="text-2xl font-bold text-white">Revolutionizing Organization</h3>
                         <p class="text-gray-400">
                             We're not just another to-do list. ReflectEd combines porductivity and mental health with collaborative elements such as reminders, to-do lists, notes, and a modd tracker.
                         </p>
