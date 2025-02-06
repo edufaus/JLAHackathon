@@ -1,6 +1,6 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { browser } from "$app/environment";
-import { auth } from "$lib/database.js";
+import { auth } from "$lib/firestuff.js";
 
 export async function GAUTH() {
   const provider = new GoogleAuthProvider();
