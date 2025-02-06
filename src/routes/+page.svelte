@@ -41,17 +41,12 @@
         <nav class="container mx-auto p-6 fixed top-0 left-0 right-0 z-50">
             <div class="flex items-center justify-between p-4 rounded-lg backdrop-blur-md bg-black/20 border border-white/10">
                 <div class="flex items-center">
-                <h1 class="text-2xl color-white text-white">ReflectEd</h1>
-                    
+                    <p class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">ReflectEd</p>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <div class="space-x-8">
                         <a href="#features" class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">
                             <span>Features</span>
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B5CF6] transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="#pricing" class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">
-                            <span>Pricing</span>
                             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B5CF6] transition-all duration-300 group-hover:w-full"></span>
                         </a>
                         <a href="#about" class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">
@@ -84,7 +79,7 @@
                 <h1
                     class="py-2 hero-title opacity-0 translate-y-8 text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-[#8B5CF6] via-[#9f75ff] to-[#8B5CF6] bg-clip-text text-transparent"
                 >
-                Foster mental health through collaboration.
+                Foster mental health through productivity.
                 <!-- Foster emotional intelligence/genuises through collaboration and reflection -->
                 <!-- a Mental  -->
                 </h1>
