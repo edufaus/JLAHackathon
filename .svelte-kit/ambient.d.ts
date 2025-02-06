@@ -44,9 +44,9 @@ declare module '$env/static/private' {
 	export const WINDOWID: string;
 	export const MallocSpaceEfficient: string;
 	export const npm_package_scripts_dev: string;
+	export const ZDOTDIR: string;
 	export const MallocNanoZone: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
-	export const ZDOTDIR: string;
 	export const npm_package_private: string;
 	export const npm_package_devDependencies__sveltejs_kit: string;
 	export const npm_config_registry: string;
@@ -121,10 +121,10 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const npm_package_devDependencies_prettier_plugin_tailwindcss: string;
-	export const ZED_TERM: string;
 	export const ICUBE_PROVIDER: string;
-	export const BUN_INSTALL: string;
+	export const ZED_TERM: string;
 	export const ICUBE_APP_VERSION: string;
+	export const BUN_INSTALL: string;
 	export const ICUBE_MACHINE_ID: string;
 	export const npm_config_user_agent: string;
 	export const INFOPATH: string;
@@ -184,9 +184,9 @@ declare module '$env/dynamic/private' {
 		WINDOWID: string;
 		MallocSpaceEfficient: string;
 		npm_package_scripts_dev: string;
+		ZDOTDIR: string;
 		MallocNanoZone: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
-		ZDOTDIR: string;
 		npm_package_private: string;
 		npm_package_devDependencies__sveltejs_kit: string;
 		npm_config_registry: string;
@@ -261,10 +261,10 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_script: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		npm_package_devDependencies_prettier_plugin_tailwindcss: string;
-		ZED_TERM: string;
 		ICUBE_PROVIDER: string;
-		BUN_INSTALL: string;
+		ZED_TERM: string;
 		ICUBE_APP_VERSION: string;
+		BUN_INSTALL: string;
 		ICUBE_MACHINE_ID: string;
 		npm_config_user_agent: string;
 		INFOPATH: string;

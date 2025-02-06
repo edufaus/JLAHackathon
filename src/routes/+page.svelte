@@ -90,8 +90,7 @@
                 <p
                     class="hero-description opacity-0 translate-y-8 text-xl text-gray-400 mb-12 max-w-2xl mx-auto"
                 >
-                    The mental health first app designed to help yo ube more productive adn efficiency inh your educational journey
-                    The simplistic all-in-one school app designed to promote emotional intelligence and productivity.
+                    The mental health first app designed to help you be more productive and efficiency in your educational journey
                 <!-- The easy-to-use AI-powered suite of applications designed to enhance your workflow, not replace it. -->
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -105,7 +104,7 @@
                         variant="outline"
                         class="text-lg px-8 py-6 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[black/50] hover:text-[#8B5CF6] bg-black/50 backdrop-blur-sm transition-all duration-300 hover:scale-105"
                     >
-                        Watch Demo
+                        View Presentation
                         <!-- keep? -->
                     </Button>
                 </div>
@@ -116,9 +115,9 @@
         <div id="features" class="container mx-auto px-6 py-24 scroll-mt-20">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {#each [
-                    { icon: Brain, title: "AI-Powered Lectures", desc: "Enhance recorded lectures or live lecture by adding interactive questions, generating notes, etc. ." },
+                    { icon: Brain, title: "Mood Tracking", desc: "Develop emotional intelligence through daily reflections." },
                     { icon: Sparkles, title: "Intuitive Interface", desc: "Clean, modern design that makes productivity tools accessible to everyone." },
-                    { icon: Zap, title: "Lightning Fast", desc: "Optimized performance to keep up with your workflow without delays." }
+                    { icon: Zap, title: "Collaboration", desc: "Foster collaboration and productivity through shared notes and reminders." }
                 ] as feature}
                 <div
                     class="feature-card p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6] transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(219,74,43,0.2)]"
@@ -157,54 +156,41 @@
 
         <div id="pricing" class="container mx-auto px-6 py-24 border-t border-[#8B5CF6]/20 scroll-mt-20">
             <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#8B5CF6] to-[#9f75ff] bg-clip-text text-transparent">
-                Pricing
+                Plans
             </h2>
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Free Plan -->
                 <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
-                    <h3 class="text-2xl font-bold text-white mb-4">Free</h3>
+                    <h3 class="text-2xl font-bold text-white mb-4">Student</h3>
                     <div class="text-4xl font-bold text-gray-400 mb-6">$0</div>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />5 AI queries/day</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Basic features</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Community support</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Daily mood reflection</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Recieve reminders</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Collaborate with others</li>
                     </ul>
                     <!-- <Button variant="outline" class="w-full border-[#db4a2b] text-[#db4a2b] hover:bg-[#db4a2b]/10">Get Started</Button> -->
                 </div>
 
                 <!-- Credits Plan -->
                 <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
-                    <h3 class="text-2xl font-bold text-white mb-4">Credits</h3>
+                    <h3 class="text-2xl font-bold text-white mb-4">Educator</h3>
                     <div class="text-4xl font-bold text-[#db4a2b] mb-6">$5<span class="text-lg text-gray-400">/500</span></div>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Pay as you go</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />All features included</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Credits never expire</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Track student moods</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Send reminders</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Chat with students</li>
                     </ul>
                     <!-- <Button class="w-full bg-[#db4a2b] hover:bg-[#b33a22]">Buy Credits</Button> -->
                 </div>
 
-                <!-- Pro Plan -->
-                <div class="p-8 rounded-xl bg-gradient-to-br from-[#1b1125] to-black border-2 border-[#8B5CF6] backdrop-blur-sm transform scale-105">
-                    <div class="absolute -top-2 right-4 bg-[#8B5CF6] text-white text-sm px-3 py-1 rounded-full">Popular</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Pro</h3>
-                    <div class="text-4xl font-bold text-[#8B5CF6] mb-6">$29<span class="text-lg text-gray-400">/month</span></div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Unlimited queries</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Priority support</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Advanced features</li>
-                    </ul>
-                    <!-- <Button class="w-full bg-[#db4a2b] hover:bg-[#b33a22]">Get Started</Button> -->
-                </div>
-
                 <!-- Enterprise Plan -->
                 <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
-                    <h3 class="text-2xl font-bold text-white mb-4">Enterprise</h3>
+                    <h3 class="text-2xl font-bold text-white mb-4">Admin</h3>
                     <div class="text-4xl font-bold text-[#db4a2b] mb-6">Custom</div>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />School-wide access</li>
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Student management</li>
-                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Custom integrations</li>
+                        <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />All features included</li>
                     </ul>
                     <!-- <Button variant="outline" class="w-full border-[#db4a2b] text-[#db4a2b] hover:bg-[#db4a2b]/10">Contact Sales</Button> -->
                 </div>
@@ -218,7 +204,7 @@
                     © 2025 ReflectEd. All rights reserved.
                 </div>
                 <div class="text-[#8B5CF6]">
-                    Developer: Eduard Faus, Dylan Paucar, Jose Zequira, Pablo Castro
+                    Developers: Eduard Faus, Dylan Paucar, Jose Zequeira, Pablo Castro
                 </div>
             </div>
         </footer>
