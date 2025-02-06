@@ -68,16 +68,16 @@
     });
 </script>
 
-<div class="relative min-h-screen bg-gradient-to-br from-black via-slate-900 to-[#2b1511] flex items-center justify-center" >
+<div class="relative min-h-screen bg-gradient-to-br from-black via-slate-900 to-[#110033] flex items-center justify-center" >
     <!-- Interactive background grid -->
     <div 
-        class="grid-background absolute inset-0 bg-[linear-gradient(to_right,#db4a2b1a_1px,transparent_1px),linear-gradient(to_bottom,#db4a2b1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] transition-transform duration-300"
+        class="grid-background absolute inset-0 bg-[linear-gradient(to_right,#8B5CF61a_1px,transparent_1px),linear-gradient(to_bottom,#8B5CF61a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] transition-transform duration-300"
     ></div>
 
-    <Card class="login-card w-full max-w-md mx-4 p-8 bg-black/40 backdrop-blur-xl border border-[#db4a2b]/20 hover:border-[#db4a2b]/40 transition-all duration-500">
+    <Card class="login-card w-full max-w-md mx-4 p-8 bg-black/40 backdrop-blur-xl border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40 transition-all duration-500">
         <div class="text-center mb-8">
             <img src="../Learnique.svg" alt="Learnique" class="login-element h-12 w-auto mx-auto mb-6"/>
-            <h2 class="login-element text-2xl font-bold bg-gradient-to-r from-[#db4a2b] to-[#e86547] bg-clip-text text-transparent">
+            <h2 class="login-element text-2xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#cc99ff] bg-clip-text text-transparent">
                 Welcome Back
             </h2>
         </div>
@@ -99,7 +99,7 @@
                     type="email" 
                     bind:value={email}
                     placeholder="Email" 
-                    class="ring-offset-transparent pl-10 bg-black/30 border-[#db4a2b]/20 text-white placeholder:text-gray-400 focus:border-[#db4a2b] hover:border-[#b33a22]/40 transition-all "
+                    class="ring-offset-transparent pl-10 bg-black/30 border-[#8B5CF6]/20 text-white placeholder:text-gray-400 focus:border-[#8B5CF6] hover:border-[#7733ff]/40 transition-all "
                 />
             </div>
 
@@ -109,13 +109,13 @@
                 type="password"
                 bind:value={password}
                 placeholder="Password"
-                class="ring-offset-transparent pl-10 bg-black/30 border-[#db4a2b]/20 text-white placeholder:text-gray-400 focus:border-[#db4a2b] hover:border-[#b33a22]/40 transition-all "
+                class="ring-offset-transparent pl-10 bg-black/30 border-[#8B5CF6]/20 text-white placeholder:text-gray-400 focus:border-[#8B5CF6] hover:border-[#7733ff]/40 transition-all "
             />
             
             </div>
 
             <Button 
-                class="login-element w-full bg-[#db4a2b] hover:bg-[#b33a22] transform hover:scale-105 transition-all duration-300"
+                class="login-element w-full bg-[#8B5CF6] hover:bg-[#7733ff] transform hover:scale-105 transition-all duration-300"
                 onclick={signUpWithEmail}
             >
                 Sign Up <ArrowRight class="ml-2 w-4 h-4" />
@@ -131,7 +131,7 @@
                 <Button 
                 variant="outline" 
                 onclick={GAUTH}
-                class="w-full text-white/75 hover:text-white/95 border-[#db4a2b]/20 hover:border-[#db4a2b]/40 bg-black/30 hover:bg-black/50 transform hover:scale-105 transition-all duration-300"
+                class="w-full text-white/75 hover:text-white/95 border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40 bg-black/30 hover:bg-black/50 transform hover:scale-105 transition-all duration-300"
             >
                 <img src="/google.svg" alt="Google" class="w-5 h-5 mr-2" />
                 Sign in with Google
@@ -139,10 +139,10 @@
             </div>
 
             <div class="login-element flex justify-between text-sm">
-                <a href="/auth/forgot-password" class="text-[#db4a2b] hover:text-[#e86547] transition-colors">
+                <a href="/auth/forgot-password" class="text-[#8B5CF6] hover:text-[#cc99ff] transition-colors">
                     Forgot Password?
                 </a>
-                <a href="/auth/login" class="text-[#db4a2b] hover:text-[#e86547] transition-colors">
+                <a href="/auth/login" class="text-[#8B5CF6] hover:text-[#cc99ff] transition-colors">
                     Login to an existing account
                 </a>
             </div>

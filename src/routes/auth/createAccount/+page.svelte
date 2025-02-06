@@ -49,7 +49,6 @@
 
     async function handleSubmit() {
         try {
-            console.log(user)
             loading = true;
             error = '';
 
@@ -65,14 +64,32 @@
                 createdAt: new Date().toISOString(),
                 isAdmin: false
             });
-
+    
             // Initialize emotions collection structure
             const emotionsDoc = doc(db, 'Emotions', user.uid);
             await setDoc(emotionsDoc, {
                 userId: user.uid,
                 createdAt: new Date().toISOString()
             });
-
+    
+            // Initialize todos collection structure
+            const todosDoc = doc(db, 'Todos', user.uid);
+            await setDoc(todosDoc, {
+                userId: user.uid,
+                createdAt: new Date().toISOString()
+            });
+    
+            // Create initial collections
+            const initialCollections = ['items', 'categories', 'reminders'];
+            for (const collectionName of initialCollections) {
+                const collectionRef = collection(db, 'Todos', user.uid, collectionName);
+                const initDoc = doc(collectionRef, 'init');
+                await setDoc(initDoc, {
+                    created: new Date().toISOString(),
+                    type: collectionName
+                });
+            }
+    
             goto('/dashboard');
         } catch (e: any) {
             error = e.message;

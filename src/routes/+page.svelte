@@ -47,15 +47,15 @@
                     <div class="space-x-8">
                         <a href="#features" class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">
                             <span>Features</span>
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#db4a2b] transition-all duration-300 group-hover:w-full"></span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B5CF6] transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#pricing" class="text-gray-300 hover:text-[#db4a2b] transition-colors relative group">
+                        <a href="#pricing" class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">
                             <span>Pricing</span>
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#db4a2b] transition-all duration-300 group-hover:w-full"></span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B5CF6] transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#about" class="text-gray-300 hover:text-[#db4a2b] transition-colors relative group">
+                        <a href="#about" class="text-gray-300 hover:text-[#8B5CF6] transition-colors relative group">
                             <span>About</span>
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#db4a2b] transition-all duration-300 group-hover:w-full"></span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B5CF6] transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </div>
                     <div class="flex items-center space-x-4">
@@ -168,31 +168,31 @@
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Recieve reminders</li>
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Collaborate with others</li>
                     </ul>
-                    <!-- <Button variant="outline" class="w-full border-[#db4a2b] text-[#db4a2b] hover:bg-[#db4a2b]/10">Get Started</Button> -->
+                    <!-- <Button variant="outline" class="w-full border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10">Get Started</Button> -->
                 </div>
 
                 <!-- Credits Plan -->
                 <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
                     <h3 class="text-2xl font-bold text-white mb-4">Educator</h3>
-                    <div class="text-4xl font-bold text-[#db4a2b] mb-6">$5<span class="text-lg text-gray-400">/500</span></div>
+                    <div class="text-4xl font-bold text-[#8B5CF6] mb-6">$5<span class="text-lg text-gray-400">/500</span></div>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Track student moods</li>
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Send reminders</li>
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Chat with students</li>
                     </ul>
-                    <!-- <Button class="w-full bg-[#db4a2b] hover:bg-[#b33a22]">Buy Credits</Button> -->
+                    <!-- <Button class="w-full bg-[#8B5CF6] hover:bg-[#7733ff]">Buy Credits</Button> -->
                 </div>
 
                 <!-- Enterprise Plan -->
                 <div class="p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-[#8B5CF6]/20 backdrop-blur-sm hover:border-[#8B5CF6]/40 transition-colors">
                     <h3 class="text-2xl font-bold text-white mb-4">Admin</h3>
-                    <div class="text-4xl font-bold text-[#db4a2b] mb-6">Custom</div>
+                    <div class="text-4xl font-bold text-[#8B5CF6] mb-6">Custom</div>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />School-wide access</li>
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />Student management</li>
                         <li class="flex items-center text-gray-300"><ChevronRight class="w-5 h-5 mr-2 text-[#8B5CF6]" />All features included</li>
                     </ul>
-                    <!-- <Button variant="outline" class="w-full border-[#db4a2b] text-[#db4a2b] hover:bg-[#db4a2b]/10">Contact Sales</Button> -->
+                    <!-- <Button variant="outline" class="w-full border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10">Contact Sales</Button> -->
                 </div>
             </div>
         </div>

@@ -155,5 +155,8 @@
                 {/each}
             </div>
         </div>
+        <a href="/dashboard">
+            <Button class="bg-[#8B5CF6] text-white hover:bg-[#7733ff] transition-all duration-300">Dashboard</Button>
+        </a>
     </div>
 </div>
