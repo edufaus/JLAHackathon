@@ -41,7 +41,7 @@
         <nav class="container mx-auto p-6 fixed top-0 left-0 right-0 z-50">
             <div class="flex items-center justify-between p-4 rounded-lg backdrop-blur-md bg-black/20 border border-white/10">
                 <div class="flex items-center">
-                    <img src="Learnique.svg" alt="Learnique" class="h-12 w-auto mr-4"/>
+                    <img src="ReflectEd.png" alt="Learnique" class="h-12 w-auto mr-4"/>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <div class="space-x-8">

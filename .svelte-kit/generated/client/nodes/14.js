@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/planner/+page.svelte";
+export { default as component } from "../../../../src/routes/logMood/+page.svelte";

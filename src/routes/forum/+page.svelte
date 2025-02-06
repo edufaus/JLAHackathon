@@ -10,6 +10,7 @@
     let newPostTitle = "";
     let newPostContent = "";
     let newPostTags = "";
+    let newComments: { [key: string]: string } = {};  // Add this line
 
     async function loadPosts() {
         try {
@@ -96,6 +97,36 @@
             console.error("Error deleting post:", error);
         }
     }
+
+    async function addComment(postId: string) {
+        try {
+            if (!user || !user.uid || !newComments[postId]) {
+                console.error('Missing required fields');
+                return;
+            }
+
+            const postRef = doc(db, "Posts", postId);
+            const postDoc = await getDoc(postRef);
+            
+            if (postDoc.exists()) {
+                const postData = postDoc.data();
+                const comments = postData.comments || [];
+                
+                comments.push({
+                    content: newComments[postId],
+                    authorId: user.uid,
+                    authorName: user.fullName || user.name || 'Anonymous',
+                    timestamp: new Date().toISOString()
+                });
+
+                await setDoc(postRef, { ...postData, comments });
+                newComments[postId] = '';
+                await loadPosts();
+            }
+        } catch (error) {
+            console.error("Error adding comment:", error);
+        }
+    }
 </script>
 
 <div class="min-h-screen bg-gradient-to-br from-black via-slate-900 to-[#110033] p-8">
@@ -104,39 +135,21 @@
             <h1 class="text-4xl font-bold bg-gradient-to-r from-[#8B5CF6] via-[#cc99ff] to-[#7733ff] bg-clip-text text-transparent">
                 Student Forum
             </h1>
-            <Button
-                class="bg-[#8B5CF6] text-white hover:bg-[#7c4ddb]"
-                onclick={() => window.location.href = '/dashboard'}
-            >
-                Back to Dashboard
-            </Button>
+            <div class="space-x-4">
+                <Button
+                    class="bg-[#8B5CF6] text-white hover:bg-[#7c4ddb]"
+                    onclick={() => window.location.href = '/forum/create'}
+                >
+                    Create Post
+                </Button>
+                <Button
+                    class="bg-[#8B5CF6] text-white hover:bg-[#7c4ddb]"
+                    onclick={() => window.location.href = '/dashboard'}
+                >
+                    Back to Dashboard
+                </Button>
+            </div>
         </div>
-
-        <!-- Create Post Form -->
-        <form class="mb-8 space-y-4" on:submit|preventDefault={createPost}>
-            <Input
-                type="text"
-                placeholder="Post title"
-                bind:value={newPostTitle}
-                required
-                class="bg-black/30 border-[#8B5CF6]/20 text-white"
-            />
-            <textarea
-                placeholder="Write your post here..."
-                bind:value={newPostContent}
-                required
-                class="w-full h-32 bg-black/30 border border-[#8B5CF6]/20 rounded-md p-2 text-white resize-none"
-            />
-            <Input
-                type="text"
-                placeholder="Tags (comma-separated, e.g.: homework, math, help)"
-                bind:value={newPostTags}
-                class="bg-black/30 border-[#8B5CF6]/20 text-white"
-            />
-            <Button type="submit" class="w-full bg-[#8B5CF6] text-white hover:bg-[#7c4ddb]">
-                Create Post
-            </Button>
-        </form>
 
         <!-- Posts List -->
         <div class="space-y-6">
@@ -164,6 +177,38 @@
                     <div class="flex justify-between items-center mt-4 text-sm">
                         <span class="text-white/60">Posted by {post.authorName}</span>
                         <span class="text-[#8B5CF6]">{new Date(post.timestamp).toLocaleString()}</span>
+                    </div>
+                    
+                    <!-- Comments Section -->
+                    <div class="mt-6 border-t border-[#8B5CF6]/20 pt-4">
+                        <h3 class="text-lg font-semibold text-white mb-4">Comments</h3>
+                        
+                        <!-- Comment List -->
+                        <div class="space-y-4 mb-4">
+                            {#each post.comments || [] as comment}
+                                <div class="bg-black/40 p-3 rounded">
+                                    <p class="text-white/80">{comment.content}</p>
+                                    <div class="flex justify-between items-center mt-2 text-sm">
+                                        <span class="text-white/60">By {comment.authorName}</span>
+                                        <span class="text-[#8B5CF6]">{new Date(comment.timestamp).toLocaleString()}</span>
+                                    </div>
+                                </div>
+                            {/each}
+                        </div>
+
+                        <!-- Add Comment Form -->
+                        <form class="flex gap-2" on:submit|preventDefault={() => addComment(post.id)}>
+                            <Input
+                                type="text"
+                                placeholder="Write a comment..."
+                                bind:value={newComments[post.id]}
+                                required
+                                class="flex-1 bg-black/30 border-[#8B5CF6]/20 text-white"
+                            />
+                            <Button type="submit" class="bg-[#8B5CF6] text-white hover:bg-[#7c4ddb]">
+                                Comment
+                            </Button>
+                        </form>
                     </div>
                 </div>
             {/each}
